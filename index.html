@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en" class="text-xs sm:text-sm">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="dist/style.css" />
+
+    <title>Document</title>
+  </head>
+  <body
+    class="font-body min-h-screen w-full"
+    style="
+      background: url(assets/img/header_bg.svg) no-repeat;
+      background-size: contain;
+    "
+  >
+    <header class="relative">
+      <div class="header__container py-7 px-10 flex justify-between">
+        <div class="logo"><img src="assets/img/logo.png" alt="" /></div>
+
+        <a
+          class="block md:hidden p-5 text-3xl text-primary-200"
+          id="bars"
+          href=""
+          ><i class="fa fa-bars"></i
+        ></a>
+
+        <nav
+          id="menu"
+          class="
+            hidden-menu
+            w-1/3
+            text-center
+            bg-primary-100
+            hidden
+            absolute
+            top-28
+            right-0
+          "
+        >
+          <ul class="">
+            <li
+              class="
+                p-3
+                text-primary-200
+                uppercase
+                text-xl
+                border-b-2 border-white
+                hover:text-white
+              "
+            >
+              <a href="">Home</a>
+            </li>
+            <li
+              class="
+                p-3
+                text-primary-200
+                uppercase
+                text-xl
+                border-b-2 border-white
+                hover:text-white
+              "
+            >
+              <a href="">About Us</a>
+            </li>
+            <li
+              class="
+                p-3
+                text-primary-200
+                uppercase
+                text-xl
+                border-b-2 border-white
+                hover:text-white
+              "
+            >
+              <a href="">Teachers</a>
+            </li>
+            <li
+              class="
+                p-3
+                text-primary-200
+                uppercase
+                text-xl
+                border-b-2 border-white
+                hover:text-white
+              "
+            >
+              <a href="">Pricing</a>
+            </li>
+            <li
+              class="
+                p-3
+                text-primary-200
+                uppercase
+                text-xl
+                border-b-2 border-white
+                hover:text-white
+              "
+            >
+              <a href="">Blog</a>
+            </li>
+            <li
+              class="
+                p-3
+                text-primary-200
+                uppercase
+                text-xl
+                border-b-2 border-white
+                hover:text-white
+              "
+            >
+              <a href="">Login</a>
+            </li>
+          </ul>
+        </nav>
+
+        <nav class="md:block hidden">
+          <ul class="flex">
+            <li class="mr-5 mt-1"><a href="">Home</a></li>
+            <li class="mr-5 mt-1"><a href="">About Us</a></li>
+            <li class="mr-5 mt-1"><a href="">Teachers</a></li>
+            <li class="mr-5 mt-1"><a href="">Pricing</a></li>
+            <li class="mr-5 mt-1"><a href="">Blog</a></li>
+            <li class="mr-5 mt-1"><a href="">Login</a></li>
+            <li class="mr-3">
+              <a
+                class="
+                  bg-primary-200
+                  py-2
+                  px-3
+                  rounded-2xl
+                  text-white
+                  uppercase
+                  cursor-pointer
+                  hover:bg-primary-100
+                  hover:text-primary-200
+                "
+                href=""
+                >start free trial</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="intro p-10">
+        <h1 class="text-5xl sm:text-7xl text-primary-200 sm:ml-48">About Us</h1>
+        <p class="text-primary-200 ml-48">Welcome to Wand Yoga Studio</p>
+      </div>
+    </header>
+    <main>
+      <section class="about flex flex-wrap xl:flex-nowrap">
+        <div
+          class="about__text xl:w-1/2 mt-48 py-5 px-10 leading-8 tracking-wider"
+        >
+          <p>
+            We offer over 4000 professionaly filmed online yoga classes taught
+            by experienced, certified yoga teachers to customers around the
+            world. We believe that yoga should be accessible to everyone and our
+            classes are designed to give you an in-studio experience, at an
+            affordable price, in your own home.
+          </p>
+          <br />
+          <p>
+            Wand yoga is designed and created specificially to serve you. Our
+            goal is to create a destination for people of all experience levels
+            and backgrounds to practice, grow and heal. Our mission is to create
+            a community of health and wellbeing through the practice of yoga.
+            Wand Yoga is a space that will inspire growth and self-awerness. Our
+            passion is to motivate one`s desire to achieve their full potential.
+            Wand Yoga will welcome and encourage your every step on the way.
+          </p>
+        </div>
+        <div class="about__image">
+          <img src="assets/img/Image.png" alt="" />
+        </div>
+      </section>
+      <section
+        class="
+          quote
+          px-5
+          py-20
+          flex
+          justify-center
+          items-center
+          flex-col
+          h-60
+          text-center
+        "
+        style="background: url(assets/img/quote_bg.png)"
+      >
+        <p class="text-xl text-white">
+          <em
+            >"Put your heart, mind, intellect even into your smallest acts. this
+            is the secret of success."</em
+          >
+        </p>
+        <br />
+        <span class="mt-3 text-white">Myriam Jessier</span>
+      </section>
+      <section
+        class="classes grid lg:grid-cols-3 gap-2 p-5"
+        style="
+          background: url(assets/img/classes_bg.png) no-repeat;
+          background-size: cover;
+         
+        "
+      >
+        <div class="classes__card p-5 mt-20">
+          <div class="classes__card--image">
+            <img src="assets/img/classes1.png" alt="" />
+          </div>
+          <div class="classes__card--text p-5">
+            <h3 class="text-primary-200 mb-2 text-xl">Basic Step</h3>
+            <p>
+              This class is designed for first time yogis. it`s right class for
+              you if you want to learn the fundamentals of the yoga in the group
+              where everyone is new. The teacher will give you some background
+              on yoga while you`re seated, bit be pre3pared to move. You`ll walk
+              out feeling embodied, emproved, energized, and eager to come back.
+            </p>
+          </div>
+        </div>
+        <div class="classes__card p-5 mt-20">
+          <div class="classes__card--image">
+            <img src="assets/img/classes2.png" alt="" />
+          </div>
+          <div class="classes__card--text p-5">
+            <h3 class="text-primary-200 mb-2 text-xl">Level 1 Classes</h3>
+            <p>
+              This class is designed for first time yogis. it`s right class for
+              you if you want to learn the fundamentals of the yoga in the group
+              where everyone is new. The teacher will give you some background
+              on yoga while you`re seated, bit be pre3pared to move. You`ll walk
+              out feeling embodied, emproved, energized, and eager to come back.
+            </p>
+          </div>
+        </div>
+        <div class="classes__card p-5 mt-20">
+          <div class="classes__card--image">
+            <img src="assets/img/classes3.png" alt="" />
+          </div>
+          <div class="classes__card--text p-5">
+            <h3 class="text-primary-200 mb-2 text-xl">Gentle Yoga</h3>
+            <p>
+              This class is designed for first time yogis. it`s right class for
+              you if you want to learn the fundamentals of the yoga in the group
+              where everyone is new. The teacher will give you some background
+              on yoga while you`re seated, bit be pre3pared to move. You`ll walk
+              out feeling embodied, emproved, energized, and eager to come back.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="features bg-primary-100 p-20">
+        <div
+          class="
+            features__testimonials
+            flex
+            justify-center
+            items-center
+            flex-col
+            text-primary-200
+          "
+        >
+          <h2 class="mb-5 font-bold text-xl">So Many Features</h2>
+          <p class="text-center">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex
+            perspiciatis accusamus impedit <br />exercitationem. Ea officiis
+            deserunt consequatur minus, qui quaerat.
+          </p>
+          <img class="m-5" src="assets/img/round_img.png" alt="" />
+          <span class="font-bold mt-2">Svetlin Denkov</span>
+          <p>Envato Author</p>
+        </div>
+        <div class="features__features grid grid-cols-2 md:grid-cols-4 gap-5">
+          <div class="features__card text-center text-primary-200 p-10 mt-10">
+            <span class="font-bold text-xl">234</span><br /><span
+              >Designs Created</span
+            >
+          </div>
+          <div class="features__card text-center text-primary-200 p-10 mt-10">
+            <span class="font-bold text-xl">123</span><br /><span
+              >Designs Created</span
+            >
+          </div>
+          <div class="features__card text-center text-primary-200 p-10 mt-10">
+            <span class="font-bold text-xl">6789</span><br /><span
+              >Designs Created</span
+            >
+          </div>
+          <div class="features__card text-center text-primary-200 p-10 mt-10">
+            <span class="font-bold text-xl">188</span><br /><span
+              >Designs Created</span
+            >
+          </div>
+        </div>
+      </section>
+      <section
+        class="
+          proposition
+          py-20
+          flex flex-col
+          justify-center
+          items-center
+          text-center
+        "
+      >
+        <h1 class="text-4xl p-3">Tap into your inner fountain of youth</h1>
+        <p class="p-3 text-sm text-gray-700">
+          Access hundreds of yoga classes shot in natural studios around the
+          world. Unlimited access for $15 per month
+        </p>
+        <a
+          class="
+            bg-primary-200
+            py-2
+            px-10
+            rounded-2xl
+            text-white
+            uppercase
+            cursor-pointer
+            mt-5
+            hover:bg-primary-100
+            hover:text-primary-200
+          "
+          href=""
+          >start free trial</a
+        >
+      </section>
+    </main>
+    <footer>
+      <div
+        class="
+          footer__header
+          bg-dark-200
+          flex flex-wrap
+          md:flex-nowrap
+          justify-between
+          p-5
+        "
+      >
+        <div
+          class="
+            logo
+            hidden
+            flex-wrap
+            md:flex-nowrap
+            lg:justify-around
+            items-center
+            px-5
+            w-1/4
+            sm:flex
+          "
+        >
+          <div class="footer-logo-img">
+            <img src="assets/img/footer_logo.png" alt="" />
+          </div>
+          <div class="footer-logo-text px-5 text-primary-200 font-bold">
+            Wand Yoga
+          </div>
+        </div>
+        <div
+          class="
+            subscribe
+            flex flex-wrap
+            sm:flex-nowrap
+            justify-between
+            items-center
+            px-5
+          "
+        >
+          <div class="hidden sm:block subscribe-text mr-20">
+            <h3 class="text-white text-lg font-bold">Subscribe</h3>
+            <p class="text-white text-sm opacity-80 mt-2">
+              To receive latest freebies in your mailbox
+            </p>
+          </div>
+          <div class="subscribe-form mr-5 mt-2 px-5">
+            <div
+              class="
+                inputbox
+                bg-white
+                py-0
+                px-0
+                rounded-3xl
+                text-white
+                uppercase
+                cursor-pointer
+                
+              "
+            >
+              <input
+                class="py-2 px-5 rounded-2xl"
+                type="email"
+                name="email"
+                placeholder="your email"
+              />
+              <input
+                class="
+                  bg-primary-200
+                  py-3
+                  px-5
+                  rounded-3xl
+                  text-white
+                  uppercase
+                  cursor-pointer
+                  hover:bg-primary-100
+                  hover:text-primary-200
+                "
+                type="submit"
+                value="subscribe"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="
+          footer__main
+          p-5
+          grid
+          sm:grid-cols-2
+          lg:grid-cols-4
+          gap-2
+          bg-dark-100
+        "
+      >
+        <div class="contact text-white mt-10">
+          <div class="contact-info text-sm">
+            <h3 class="p-2 font-bold text-xl">Contact Us</h3>
+            <ul>
+              <li class="p-2 hover:text-primary-200">
+                PO Box 16122 Victoria Australia
+              </li>
+              <li class="p-2 hover:text-primary-200">Allstudios@gmail.com</li>
+              <li class="p-2 hover:text-primary-200">+123 456 789</li>
+            </ul>
+          </div>
+          <div class="contact-social">
+            <ul class="flex">
+              <li class="p-2">
+                <a href=""
+                  ><i
+                    class="
+                      fab
+                      fa-facebook
+                      text-2xl text-blue-600
+                      hover:text-blue-300
+                    "
+                  ></i
+                ></a>
+              </li>
+              <li class="p-2">
+                <a href=""
+                  ><i
+                    class="
+                      fab
+                      fa-twitter
+                      text-2xl text-green-600
+                      hover:text-green-300
+                    "
+                  ></i
+                ></a>
+              </li>
+              <li class="p-2">
+                <a href=""
+                  ><i
+                    class="
+                      fab
+                      fa-instagram
+                      text-2xl text-red-600
+                      hover:text-red-300
+                    "
+                  ></i
+                ></a>
+              </li>
+              <li class="p-2">
+                <a href=""
+                  ><i
+                    class="
+                      fab
+                      fa-pinterest
+                      text-2xl text-yellow-600
+                      hover:text-yellow-300
+                    "
+                  ></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="links text-white text-sm mt-5">
+          <h3 class="p-2 font-bold text-xl">Useful Links</h3>
+          <ul>
+            <li class="hover:text-primary-200 p-2"><a href="">About Us</a></li>
+            <li class="hover:text-primary-200 p-2"><a href="">Advertise</a></li>
+            <li class="hover:text-primary-200 p-2">
+              <a href="">Terms & Conditions</a>
+            </li>
+            <li class="hover:text-primary-200 p-2">
+              <a href="">Privacy Policy</a>
+            </li>
+            <li class="hover:text-primary-200 p-2"><a href="">Careers</a></li>
+          </ul>
+        </div>
+
+        <div class="hours text-white text-sm">
+          <h3 class="p-2 font-bold text-xl">Open Hours</h3>
+          <ul>
+            <li class="p-2">Monday &nbsp; 10:00/22:00</li>
+            <li class="p-2">Tuesday &nbsp; 10:00/22:00</li>
+            <li class="p-2">Wednesday &nbsp; 10:00/22:00</li>
+            <li class="p-2">Thursday &nbsp; 10:00/22:00</li>
+            <li class="p-2">Friday &nbsp; 10:00/22:00</li>
+            <li class="p-2">Saturday &nbsp; 10:00/22:00</li>
+            <li class="p-2">Sunday &nbsp; 10:00/22:00</li>
+          </ul>
+        </div>
+
+        <div class="map py-10 px-5">
+          <div class="container w-80 h-48 bg-transparent" id="map"></div>
+        </div>
+      </div>
+
+      <div
+        class="footer__footer flex justify-center items-center bg-dark-200 p-5"
+      >
+        <div class="copyright text-white">
+          <p>Copyright &copy; 2021 byCold</p>
+        </div>
+      </div>
+    </footer>
+    <script src="dist/bundle.js"></script>
+  </body>
+</html>

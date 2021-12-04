@@ -1,0 +1,20 @@
+<svg id="Image" xmlns="http://www.w3.org/2000/svg" width="1920" height="1532.03" viewBox="0 0 1920 1532.03">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #dfe5f2;
+      }
+
+      .cls-1, .cls-2 {
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        fill: #7492ec;
+        opacity: 0.05;
+      }
+    </style>
+  </defs>
+  <path id="Rectangle_13_copy" data-name="Rectangle 13 copy" class="cls-1" d="M0-579H1920V386s-375.74-263-943.736,0S0,386,0,386V-579Z"/>
+  <path class="cls-2" d="M2337.95,1256.73L15.122,1532.02l-138.539-1167.1S368.907,629.13,1018.32,229.608,2199.41,89.628,2199.41,89.628Z"/>
+</svg>
